@@ -48,19 +48,98 @@ Console.WriteLine(stringExample);
 // Division: /
 var averageClassSize = studentCount / 4f; // 18 divided by 3 -> 6 || 18 divided by 4 -> 4 || 18 divided by 4f -> 4.5f
 Console.WriteLine(averageClassSize);
-// Exponentiation: ^
+// Exponentiation: Math.Pow();
 // Modulo: %
 // -- Returns the remainder after dividing by a particular number
 var time = 13 % 12; // time has a value of 1 here.
 Console.WriteLine(time);
 
-// Equality
+// Booleans
+// Boolean is a data type where the only values are 'true' vs 'false' - 'on' vs 'off' - 1 vs 0
+var isSunny = true;
+
+// Equality ==
+// Checks to see if the value of Instructor is the same as the value "Davis"
+var isDavis = Instructor == "Davis"; // Davis == Davis -> true
+
+// Not Eqaul !=
+// Checks to see if two things ARE NOT equal, returns true if the two values are not the same
+var isGavin = Instructor != "Davis";
 
 // Comparison
+// Checks to see if a value is greater than, less than, or GE or LE
+// G: >
+// L: <
+// GE: >=
+// LE: <=
+var isGreaterThan = 25 >= 25; // checking is it greater than OR is it equal to?
+// Is 25 greater than or equal to 25?
+// Is 25 greater than 25? -> false
+// Is 25 equal to 25? -> true
+// Since one part was true, the whole statement was true
 
-// Increment
+// Boolean Operators
+// We have some specific operators defined for actions between two boolean values
+
+// OR operator ||  ( | if you want to run both sides)
+// The OR operator returns true if the left is true OR the right is true
+// true || false -> true
+// false || true -> true
+// true || true -> true
+// false || false -> false
+var willGoOutside = isSunny || isDavis; // true || true -> true
+
+// AND operator && ( & if you want to run both sides)
+// The AND operator returns true if the left AND the right values are true
+// true && false -> false
+// false && true -> false
+// true && true -> true
+// false && false -> false
+var isRainy = true;
+var isCold = true;
+var willNotDrive = isRainy && isCold; // true && true -> true
+
+// NOT operator !
+// Returns the opposite of a given boolean value
+// !true -> false
+// !false -> true
+var willDrive = !willNotDrive;
+
+// Exclusive OR (XOR) operator ^
+// Only returns true when the left or right are true, false when both are true.
+// true ^ false -> true
+// false ^ true -> true
+// true ^ true -> false
+// false ^ false -> false
 
 // Parsing
 // Transforming a variable from another type (often a string) into another (often an integer)
 var parsedValue = int.Parse("15"); // integer 15
 Console.WriteLine(parsedValue + 5);
+
+// Increment
+
+
+
+
+//bool one = true
+//bool two = false
+//bool three = true
+
+// (one && !two)
+// true && true -> true
+
+// (three || (two && three))
+// true || false -> true
+
+// !two && (!three && (one || two)) || three
+// true && false || true -> true
+// false || true -> true
+Console.WriteLine(!false && (!true && (true || false)) || true);
+
+
+// one && two && three
+// false
+
+// one || two || three
+// true
